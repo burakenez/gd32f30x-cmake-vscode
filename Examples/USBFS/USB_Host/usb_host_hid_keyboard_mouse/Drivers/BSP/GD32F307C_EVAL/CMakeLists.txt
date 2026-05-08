@@ -1,0 +1,10 @@
+project(GD32F307C_EVAL LANGUAGES C CXX ASM)
+
+add_library(GD32F307C_EVAL INTERFACE)
+
+target_include_directories(GD32F307C_EVAL INTERFACE
+    ${DRIVERS_DIR}/BSP/GD32F307C_EVAL
+    ${DRIVERS_DIR}/BSP/GD32F307C_EVAL/LCD_Common
+    )
+
+target_link_libraries(GD32F307C_EVAL INTERFACE GD32F30x_standard_peripheral)
